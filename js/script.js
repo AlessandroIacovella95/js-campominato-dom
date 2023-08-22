@@ -20,7 +20,7 @@ function generateCell(i) {
             cell.classList.add('color_bomb')
             cell.append(bombIcon);
             alert('Partita terminata. Il tuo punteggio é: ' + `${userResult}`)
-            scoreResult.innerHTML = 'Hai perso, Riprova'
+            scoreResult.innerHTML = 'BOOM!!! Hai perso, Riprova'
             gameOver = true;
         } else {
             cell.classList.add('color_cells');
