@@ -2,11 +2,6 @@ main{
     background-color: aquamarine;
 }
 
-img{
-    width: 100%;
-   aspect-ratio: 1;
-}
-
 .container{
     display: flex;
     align-items: center;
