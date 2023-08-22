@@ -1,27 +1,29 @@
 //* Creo una funzione per generare una cella
-function generateCell() {
+function generateCell(i) {
     const cell = document.createElement('li');
+    cell.setAttribute('data-index', i)
     const bombIcon = document.createElement('i');
     //* Classe Font Awesome per l'icona della bomba
+    cell.className = 'cell';
     bombIcon.classList.add('fas', 'fa-bomb');
     //* Imposto la dimensione della bomba
     const iconSize = 20;
     bombIcon.style.fontSize = `${iconSize}px`
     bombIcon.style.color = 'white'
-    cell.className = 'cell';
     //* Evento al click sulla cella
     cell.addEventListener('click', function () {
         if (gameOver) return;
-        let cellNumber = parseInt (cell.innerHTML);
+        let cellNumber = parseInt (cell.getAttribute('data-index'));
+        cell.innerText = cellNumber;
         if (numbers.includes(cellNumber)) {
             cell.innerHTML = '';
-            cell.style.backgroundColor = 'red';
+            cell.classList.add('color_bomb')
             cell.append(bombIcon);
             alert('Partita terminata, premi play per riniziare la partita')
             scoreResult.innerHTML = 'Hai perso, Riprova'
             gameOver = true;
         } else {
-            cell.classList.add('color_cells', 'no-event');
+            cell.classList.add('color_cells');
             userResult += 1;
             score.innerHTML = `${userResult}`;
         }
@@ -80,9 +82,8 @@ button.addEventListener('click', function() {
     
     //* Ciclo FOR
     for (let i = 1; i <= totalCells; i++) {
-        const cell = generateCell();
+        const cell = generateCell(i);
         grid.appendChild(cell);
-        cell.innerHTML = i;
     }
 })
 

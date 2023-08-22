@@ -37,6 +37,7 @@ main{
 
 #grid .cell {
     width: 10%;
+    aspect-ratio: 1;
     border: 1px solid black;
     display: flex;
     justify-content: center;
@@ -45,7 +46,12 @@ main{
 }
 
 .color_cells {
-    background-color: rgb(55, 233, 233);
+    background: linear-gradient(to bottom, #87CEEB, #00BFFF);
+    color: white;
+}
+
+.color_bomb{
+    background: linear-gradient(to left, #FF6347, #FF0000);
 }
 
 .no-event {
@@ -56,16 +62,15 @@ main{
     font-size: 1.25rem;
 }
 
-.block{
-    display: block;
-}
-
 .score {
     height: 150px;
     width: 180px;
     border: 1px solid black;
     margin-left: 30px;
     font-size: 2.5rem;
+    background: linear-gradient(to bottom, #87CEEB, #00BFFF);
+    color: white;
+
 }
 
 #user-score {
@@ -76,4 +81,6 @@ main{
     top: 150px;
     right: 100px;
     padding-top: 32px;
+    background: linear-gradient(to bottom, #87CEEB, #00BFFF);
+    color: white;
 }
