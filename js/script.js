@@ -7,6 +7,7 @@ function generateCell() {
     //* Imposto la dimensione della bomba
     const iconSize = 20;
     bombIcon.style.fontSize = `${iconSize}px`
+    bombIcon.style.color = 'white'
     cell.className = 'cell';
     //* Evento al click sulla cella
     cell.addEventListener('click', function () {
@@ -51,9 +52,6 @@ function generateRandomNumbers(max, count) {
 //* Recupero l'elemento grid
 const grid = document.getElementById('grid');
 
-//* Recupero l'elemento button
-const button = document.getElementById('button');
-
 //* Recupero l'elemento score
 const score = document.getElementById('score-point');
 
@@ -87,3 +85,4 @@ button.addEventListener('click', function() {
         cell.innerHTML = i;
     }
 })
+
