@@ -54,10 +54,6 @@ main{
     background: linear-gradient(to left, #FF6347, #FF0000);
 }
 
-.no-event {
-    pointer-events: none;
-}
-
 .p-score {
     font-size: 1.25rem;
 }
